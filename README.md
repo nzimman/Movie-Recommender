@@ -1,4 +1,4 @@
-# Movie-Recommender
+# Movie Recommender System
 
 ## Synopsis
 The goal of this project is to create a movie recommender with a web interface. The recommendation model is based on the MovieLens dataset (https://grouplens.org/datasets/movielens/)
@@ -20,7 +20,7 @@ The goal is to describe this matrix by some hidden features (for example, a user
 ![Screenshot](nmf.png)
 
 
-It might be that there are empty elements (NaNs) in the matrix V with the ratings; we could replace the NaNs with: Zeros, the median of the whole matrix or the median of each movie.
+It might be that there are empty elements (NaNs) in the matrix V (with the ratings); we could replace the NaNs with: Zeros, the median of the whole matrix or the median of each movie.
 
 Sklearn has implemented the nmf model.  
 
@@ -32,6 +32,7 @@ By applying this algorithm, one could visualize (with a heat map) the similarity
 ![Screenshot](cos_sim.png)
 
 
+To get recommendations for a new user: add the new user and some ratings of already existing movies in the dataset. Calculate the cosine similarity of all users (including the new one) and find those users with the most similarity to the new user. Among the movies rated by the similar users, check which movies got high ratings (and the new user hasn't seen yet) and recommend them to the new user.  
 
 
 ## Web Interface
