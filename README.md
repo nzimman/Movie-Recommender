@@ -10,9 +10,9 @@ These (unsupervised) algorithms can be used in recommender systems
 ### Non-negative Matrix Factorization (NMF) Model
 The starting point is a rating matrix,
 
-![Screenshot](rating_matrix.png)
+![Screenshot](rating_m.png)
 
-The goal is to describe this matrix by some hidden features (for example, a user gives higher ratings to a particular movie genre) such as the matrix (V) is factorized into two matrices (W and H) that contain the inherent aspects/features.
+The goal is to describe this matrix by some hidden features (for example, a user gives higher ratings to a particular movie genre) such as the matrix (V) is factorized into two matrices (W- user features and H-movie features) that contain the inherent aspects/features.
 
 - All three matrices have no negative elements.
 - The product of W and H approximates V
@@ -20,8 +20,9 @@ The goal is to describe this matrix by some hidden features (for example, a user
 ![Screenshot](nmf.png)
 
 
+It might be that there are empty elements (NaNs) in the matrix V with the ratings; we could replace the NaNs with: Zeros, the median of the whole matrix or the median of each movie.
 
-For finding these two matrices, use from sklearn.decomposition the nmf model. 
+Sklearn has implemented the nmf model.  
 
 ### Cosine Similarities
 
