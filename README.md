@@ -27,7 +27,7 @@ Sklearn has implemented the nmf model.
 ### Cosine Similarities
 The idea behind this algorithm is to find the most similar users and get recommendations based on this similarity: if user1 and user2 rated movie1, movie2 and movie3 similarly but user2 has not seen movie4, this movie might be a good recommendation for user2.
 
-We can create a heat map and check the similarity of various users,
+By applying this algorithm, one could visualize (with a heat map) the similarity of various users,
 
 ![Screenshot](cos_sim.png)
 
