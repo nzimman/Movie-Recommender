@@ -1,0 +1,70 @@
+/* body{
+  background-color: gold;
+} */
+
+#logo{
+  height: 50px
+}
+
+.main-splash{
+  background-color: #0d6964;
+  height: 100vh;
+  font-size: x-large;
+  /* color: #FFE4F8; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("/static/images/background_female2.png"); */
+}
+
+.center {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.quote{
+  background-color: #98b9d2;
+  height: 100vh;
+  color: #62003C;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.toppage{
+  background-color: #0d6964;
+  color: white;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .container{
+  margin-top: auto;
+  background-color: #98b9d2;
+  height: 100vh;
+  color: #62003C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.container{
+  background-color: #FCFCF5;
+  justify-content: center;
+}
+.stripe {
+    background-color:#FCFCF5;
+    height: 20px;
+    position: relative;
+}
+#highlight{
+  color: #00C986
+}
+
+.dropdown{
+  width: 150%;
+}
