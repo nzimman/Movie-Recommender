@@ -3,6 +3,12 @@
 ## Synopsis
 The goal of this project is to create a movie recommender with a web interface. The recommendation model is based on the MovieLens dataset (https://grouplens.org/datasets/movielens/)
 
+## Data
+The recommender uses the small dataset (100,000 ratings and 3,600 tag applications applied to 9,000 movies by 600 users). 
+
+The original data consists of several csv files: links, movies, ratings and tags. Using the library sqlalchemy, I store the data in a PostGreSQL database and query it when needed. 
+
+Add the PostGreSQL credentials (username, password and database name) in the *postgres_data.py*.
 
 ## Algorithms
 We could use the following unsupervised models in our recommender system.
@@ -37,7 +43,7 @@ To get recommendations for a new user: add the new user and some ratings of alre
 
 
 ## Web Interface
-The web interface was created with Flask and this is the result...
+The web interface was created with Flask and also used few elemnts from the Bootstrap library.
 
 ![Screenshot](movie1.png)
 ![Screenshot](movie2.png)
@@ -45,6 +51,5 @@ The web interface was created with Flask and this is the result...
 
 
 To run the web, run the file *application.py*. The *templates* folder contains the html files and *static* the css file and images. 
-
-For building the front-end, I also used few elements from the Bootstrap library.   
+  
 
