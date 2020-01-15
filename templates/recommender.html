@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Movie Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="/static/images/logo-rec.png" alt="my lovely logo" id="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Recommender </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Results</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <section class="toppage">
+    <div>
+      <h1>Let's get started</h1>
+      <h5>Pick few movies and tell us what you think...</h5>
+    </div>
+  </section>
+
+  <!-- <section class="container"> -->
+  <section class="container">
+    <div class="stripe"></div>
+    <form action="/results" method="get">
+      <div class="card mb-3" style="max-width:100%;height: 162px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="/static/images/logo-reco.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Movie #1</h5>
+              <div class="dropdown">
+                <select name="movie1" required >
+                  <option value="" disabled selected>Choose a movie</option>
+                  <!-- <option value="" selected></option> -->
+                  {% for item in items1 %}
+                  <option value="{{item}}">{{item}}</option>
+                  {% endfor %}
+                </select>
+                <br>
+                <br>
+                <!-- <select name="rate1" required> -->
+                <select name="rate1" required>
+                  <option value="" disabled selected>Give a score</option>
+                  <option value="1">1- Terrible</option>
+                  <option value="2">2- Bad</option>
+                  <option value="3">3- Ok</option>
+                  <option value="4">4- Good</option>
+                  <option value="5">5- Excellent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width:100%;height: 162px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="/static/images/logo-reco.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Movie #2</h5>
+              <div class="dropdown">
+                <select name="movie2" required>
+                  <option value="" disabled selected>Choose a movie</option>
+                  {% for item in items2 %}
+                  <option value="{{item}}">{{item}}</option>
+                  {% endfor %}
+                </select>
+                <br>
+                <br>
+                <select name="rate2" required>
+                  <option value="" disabled selected>Give a score</option>
+                  <option value="1">1- Terrible</option>
+                  <option value="2">2- Bad</option>
+                  <option value="3">3- Ok</option>
+                  <option value="4">4- Good</option>
+                  <option value="5">5- Excellent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width:100%;height: 162px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="/static/images/logo-reco.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Movie #3</h5>
+              <div class="dropdown">
+                <select name="movie3" required>
+                  <option value="" disabled selected>Choose a movie</option>
+                  {% for item in items3 %}
+                  <option value="{{item}}">{{item}}</option>
+                  {% endfor %}
+                </select>
+                <br>
+                <br>
+                <select name="rate3" required>
+                  <option value="" disabled selected>Give a score</option>
+                  <option value="1">1- Terrible</option>
+                  <option value="2">2- Bad</option>
+                  <option value="3">3- Ok</option>
+                  <option value="4">4- Good</option>
+                  <option value="5">5- Excellent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <button href="/results" class="btn btn-secondary btn-lg">Get recommendations</button>
+      </div>
+
+    </form>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
