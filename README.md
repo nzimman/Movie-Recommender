@@ -22,7 +22,7 @@ The goal is to describe this matrix by some hidden features (for example, a user
 
 It might be that there are empty elements (NaNs) in the matrix V with the ratings; we could replace the NaNs with: Zeros, the median of the whole matrix or the median of each movie.
 
-I used the NMF model implemented in sklearn: given a new user and few ratings of movies in the dataset, calculate the hidden profile of the user (use the nmf trained model) and multiply it with the model components. If we sort the result (max to min while keeping track of the order of the movies) we'll get the movies to recommend the new user.
+The NMF model is implemented in sklearn: given a new user and few ratings of movies in the dataset, calculate the hidden profile of the user (use the nmf trained model) and multiply it with the model components. If we sort the result (max to min while keeping track of the order of the movies) we'll get the movies to recommend the new user.
 
 
 ### Cosine Similarities
@@ -37,5 +37,10 @@ To get recommendations for a new user: add the new user and some ratings of alre
 
 
 ## Web Interface
+The web interface was created with Flask and the result looks like this...
+![Screenshot](movie1.png)
+![Screenshot](movie2.png)
+![Screenshot](movie3.png)
+
 
 
