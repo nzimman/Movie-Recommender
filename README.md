@@ -37,10 +37,12 @@ To get recommendations for a new user: add the new user and some ratings of alre
 
 
 ## Web Interface
-The web interface was created with Flask and the result looks like this...
+The web interface was created with Flask and this is the result...
+
 ![Screenshot](movie1.png)
 ![Screenshot](movie2.png)
 ![Screenshot](movie3.png)
 
 
+To run the web, run the file *application.py*. The *templates* folder contains the html files and *static* the css file and images. 
 
