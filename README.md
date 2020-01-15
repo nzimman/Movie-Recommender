@@ -46,3 +46,5 @@ The web interface was created with Flask and this is the result...
 
 To run the web, run the file *application.py*. The *templates* folder contains the html files and *static* the css file and images. 
 
+For building the front-end, I also used few elements from the Bootstrap library.   
+
